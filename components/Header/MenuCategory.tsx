@@ -41,11 +41,14 @@ const liens = [
 
 export const MenuCategory = () => {
   return (
-    <div className="border-r border-border w-[210px] py-10 px-2">
+    <div
+      data-testid="menucategory"
+      className="border-r border-border w-[210px] py-10 px-2"
+    >
       <div className="flex flex-col gap-4 ">
         {liens.map((lien, index) => (
           <Link
-            className="capitalize font-normal text-base leading-[24px] w-fit relative "
+            className="capitalize font-normal text-base leading-[24px] w-fit relative after:content-[''] after:absolute after:bottom-[-1px] after:block after:w-0 after:bg-secondary after:h-[1px] hover:after:w-full transition-all ease-in-out after:transition-all after:ease-in-out after:duration-200"
             key={index}
             href={lien.link}
           >

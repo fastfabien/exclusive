@@ -4,3 +4,4 @@ export * from "./Hero";
 export * from "./MouthBestSelling";
 export * from "./NewArrival";
 export * from "./Products";
+export * from "./Service";

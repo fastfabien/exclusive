@@ -5,7 +5,8 @@ import {
   Hero,
   MouthBestSelling,
   NewArrival,
-  Products,
+  Product,
+  Service,
 } from "@/components/Section";
 
 export default function Home() {
@@ -16,8 +17,9 @@ export default function Home() {
       <BrowseByCategory />
       <MouthBestSelling />
       <PromotionCard />
-      <Products />
+      <Product />
       <NewArrival />
+      <Service />
     </div>
   );
 }

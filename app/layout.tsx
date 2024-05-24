@@ -20,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body
+        className={`${poppins.className} max-w-screen-2xl my-0 mx-auto bg-white`}
+      >
         <Header />
         {children}
       </body>

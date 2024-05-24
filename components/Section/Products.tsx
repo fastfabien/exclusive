@@ -1,26 +1,37 @@
 import Link from "next/link";
 import { ProductCard } from "../Card";
 
+import { Products } from "@prisma/client";
 import { Wrapper } from "../Wrapper";
 import { Separator } from "../ui/Separator";
 import { Title } from "../ui/Title";
 
-export const Products = () => {
+const API_URL = process.env.NEXT_PUBLIC_API_URL as string;
+
+async function getProducts() {
+  const res = await fetch(`${API_URL}/api/products`);
+  const products = await res.json();
+  return products;
+}
+
+export const Product = async () => {
+  const products = await getProducts();
+
   return (
     <Wrapper>
       <div className="flex flex-col gap-10">
         <Title postTitle="our products" title="explore our products" />
         <div className="flex flex-row gap-5 flex-wrap">
-          {Array.from({ length: 8 }, (_, index) => (
+          {products.data.map((product: Products, index: number) => (
             <ProductCard
               key={index}
-              image={undefined}
-              name={"HAVIT HV-G92 Gamepad"}
-              normal_price={120}
-              promotionnal_price={160}
+              image={product.couverture}
+              name={product.name}
+              normal_price={product.price}
+              promotionnal_price={product.price}
               rate_average={5}
               rate_number={88}
-              id={1}
+              id={product.id}
             />
           ))}
         </div>
