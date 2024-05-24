@@ -58,3 +58,27 @@
     @apply bg-background text-foreground;
   }
 }
+
+.bg-promotion {
+  @apply bg-cover bg-no-repeat bg-center;
+  background-image: url("/JBL.png");
+  background-size: 37rem;
+}
+
+.bg-hero {
+  @apply bg-cover bg-no-repeat bg-center;
+  background-image: url("/hero_apple.png");
+  background-size: 32rem;
+  background-position: -80px 20px;
+}
+
+.swiper-pagination-bullet {
+  background-color: hsl(var(--input)) !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.swiper-pagination-bullet-active {
+  border: 2px solid white;
+  background-color: hsl(var(--primary)) !important;
+}
