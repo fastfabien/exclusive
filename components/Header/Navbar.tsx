@@ -27,7 +27,7 @@ export const Navbar = () => {
           key={index}
           href={lien.lien}
           data-testid="navlink"
-          className="capitalize font-normal text-base leading-[24px] w-fit relative after:content-[''] after:absolute after:bottom-[-1px] after:block after:w-0 after:bg-secondary after:h-[1px] hover:after:w-full transition-all ease-in-out after:transition-all after:ease-in-out after:duration-200"
+          className="capitalize font-normal text-secondary text-base leading-[24px] w-fit relative after:content-[''] after:absolute after:bottom-[-1px] after:block after:w-0 after:bg-secondary after:h-[1px] hover:after:w-full transition-all ease-in-out after:transition-all after:ease-in-out after:duration-200"
         >
           {lien.title}
         </Link>

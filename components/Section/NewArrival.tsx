@@ -72,12 +72,12 @@ export const NewArrival = () => {
                 style={{ backgroundImage: "url('/womens-collection.png')" }}
               />
             </div>
-            <div className="flex flex-row gap-8 h-[286px] items-end justify-end w-full">
+            <div className="flex flex-row gap-8 items-end w-full h-[286px]">
               <div
-                className="w-1/2 bg-contain h-full bg-no-repeat px-6 flex flex-col justify-end py-6 rounded-sm"
+                className="w-1/2 bg-cover h-full  bg-no-repeat px-6 flex flex-col justify-end py-6 rounded-sm"
                 style={{ backgroundImage: "url('/speakers.png')" }}
               >
-                <div className="flex flex-col justify-end w-full py-6">
+                <div className="flex flex-col justify-end w-full">
                   <h4 className="font-semibold text-2xl leading-8 text-white">
                     Speakers
                   </h4>
@@ -93,10 +93,10 @@ export const NewArrival = () => {
                 </div>
               </div>
               <div
-                className="w-1/2 bg-contain h-full bg-no-repeat px-6 flex flex-col justify-end py-6 rounded-sm"
+                className="w-1/2 bg-cover h-[286px] bg-no-repeat px-6 flex flex-col justify-end py-6 rounded-sm"
                 style={{ backgroundImage: "url('/gucci-perfume.png')" }}
               >
-                <div className="flex flex-col justify-end w-full py-6">
+                <div className="flex flex-col justify-end w-full">
                   <h4 className="font-semibold text-2xl leading-8 text-white">
                     Perfume
                   </h4>
