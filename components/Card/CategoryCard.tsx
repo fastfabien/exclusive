@@ -12,10 +12,11 @@ export const CategoryCard = ({ lien, logo, name }: CategoryCardProps) => {
     <Link
       href={`category/${lien}`}
       className="flex flex-col gap-8 w-[170px] h-[145px] justify-center items-center py-7 hover:bg-primary border-border border text-black hover:text-white transition-all duration-300 ease-out"
+      data-testid="logoCard"
     >
       <Image
         src={logo}
-        alt="mandona"
+        alt={name}
         className="object-cover"
         width={56}
         height={56}
