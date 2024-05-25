@@ -30,7 +30,7 @@ export const Input = ({
         placeholder={placeholder}
         required={required}
         value={value}
-        className={`font-normal bg-transparent outline-none border-b border-secondary py-2 placeholder:capitalize ${
+        className={`font-normal bg-transparent outline-none border-b py-2 placeholder:capitalize ${
           error ? "border-primary" : "border-secondary"
         } ${classname}`}
         onChange={(e) => handleInputChange(e, setValue, setError, setMessage)}
@@ -45,7 +45,7 @@ export const Input = ({
         name={name}
         placeholder={placeholder}
         required={required}
-        className={`font-normal bg-transparent outline-none border-b border-secondary py-2 placeholder:capitalize ${
+        className={`font-normal bg-transparent outline-none border-b py-2 placeholder:capitalize ${
           error ? "border-primary" : "border-secondary"
         } ${classname}`}
         onChange={(e) => handleInputChange(e, setValue, setError, setMessage)}

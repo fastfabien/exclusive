@@ -1,12 +1,17 @@
 "use client";
-import { handleSubmit } from "@/utils/function";
+import { createUser, handleSubmit } from "@/utils/function";
 import { googleLogo } from "@/utils/images/svg";
+import { signIn } from "next-auth/react";
 import Link from "next/link";
 import { Input } from "../ui/input";
 
 export const SignUp = () => {
   return (
-    <form className="flex flex-col gap-10" onSubmit={(e) => handleSubmit(e)}>
+    <form
+      className="flex flex-col gap-10"
+      onSubmit={(e) => handleSubmit(e, createUser)}
+      noValidate
+    >
       <Input name="name" placeholder="name" type="text" />
       <Input name="email" placeholder="email" type="email" />
       <Input name="password" placeholder="password" type="password" />
@@ -17,7 +22,10 @@ export const SignUp = () => {
         >
           create account
         </button>
-        <button className="flex flex-row justify-center items-center gap-4 border-input text-secondary font-normal text-base leading-6 py-4 w-full bg-white border rounded-md">
+        <button
+          className="flex flex-row justify-center items-center gap-4 border-input text-secondary font-normal text-base leading-6 py-4 w-full bg-white border rounded-md"
+          onClick={() => signIn("google")}
+        >
           <span>{googleLogo}</span> Sign up with Google
         </button>
       </div>
